@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:hmeas/ui/auth/login.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const Login()),
+      );
+    });
     return Scaffold(
       body: Column(
         children: [
