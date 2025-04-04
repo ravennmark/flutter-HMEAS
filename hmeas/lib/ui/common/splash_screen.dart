@@ -41,7 +41,7 @@ class SplashScreen extends StatelessWidget {
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
                     color: Colors.blueGrey,
-                    fontFamily: 'Plus Jakarta Sans',
+                    fontFamily: 'PlusJakartaSans',
                   ),
                 ),
                 Text(
