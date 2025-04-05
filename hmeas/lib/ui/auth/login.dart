@@ -148,7 +148,7 @@ class _LoginState extends State<Login> {
               ),
             ),
 
-            const SizedBox(height: 16),
+            const SizedBox(height: 32),
 
             //OR divider
             Row(
@@ -169,6 +169,80 @@ class _LoginState extends State<Login> {
                 ),
                 const Expanded(
                   child: Divider(thickness: 1, color: Colors.grey),
+                ),
+              ],
+            ),
+
+            const SizedBox(height: 32),
+
+            //Google Log In Button
+            SizedBox(
+              width: double.infinity,
+              child: OutlinedButton(
+                onPressed: () {
+                  // Handle login
+                },
+                style: OutlinedButton.styleFrom(
+                  side: BorderSide(
+                    color: Colors.blueGrey.withValues(alpha: 0.5),
+                    width: 1,
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      'assets/images/google_logo.png',
+                      height: 24,
+                      width: 24,
+                    ),
+                    const SizedBox(width: 16),
+                    const Text(
+                      'Log in with Google',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'PlusJakartaSans',
+                        color: Colors.grey,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            SizedBox(height: 16),
+
+            //Sign Up Button
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  'Don\'t have an account?',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.grey,
+                    fontFamily: 'OpenJakartaSans',
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    // Handle sign up
+                  },
+                  child: const Text(
+                    'Sign Up',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                      color: Color(0xFF2952D9),
+                      fontFamily: 'ClashDisplay',
+                    ),
+                  ),
                 ),
               ],
             ),
