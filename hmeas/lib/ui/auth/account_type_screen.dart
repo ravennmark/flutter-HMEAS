@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hmeas/ui/common/widgets/step_progress_indicator.dart';
 
 /// This displays the choose account type screen.
 class AccountTypeScreen extends StatelessWidget {
@@ -50,7 +52,41 @@ class AccountTypeScreen extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(height: 64),
+            const SizedBox(height: 48),
+
+            const StepProgressIndicator(totalSteps: 5, currentStep: 0),
+
+            const SizedBox(height: 48),
+            Container(
+              padding: const EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.grey.withValues(alpha: 0.5),
+                  width: 1.0,
+                ),
+                borderRadius: BorderRadius.circular(8.0),
+              ),
+              child: Row(
+                children: [
+                  SvgPicture.asset(
+                    'assets/images/img_placeholder.svg',
+                    width: 60.0,
+                    height: 60.0,
+                  ),
+                  const SizedBox(width: 16.0),
+                  child: Column( 
+                    const Text(
+                      'Patient',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: 'ClashDisplay',
+                      ),
+                    ),
+                ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
