@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hmeas/ui/common/splash_screen.dart';
-// import 'package:hmeas/ui/auth/login.dart';
+// import 'package:hmeas/ui/common/splash_screen.dart';
+import 'package:hmeas/ui/auth/account_type_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'VitaWatch',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const SplashScreen(),
+      home: const AccountTypeScreen(),
     );
   }
 }

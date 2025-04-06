@@ -32,6 +32,7 @@ class _LoginState extends State<Login> {
         ),
         centerTitle: true,
       ),
+
       body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(

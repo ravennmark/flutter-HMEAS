@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hmeas/ui/auth/login.dart';
+import 'package:hmeas/ui/auth/login_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
