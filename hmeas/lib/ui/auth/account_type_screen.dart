@@ -31,7 +31,6 @@ class AccountTypeScreen extends StatelessWidget {
         padding: const EdgeInsets.all(24.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-
           children: [
             const Text(
               'Choose your',
@@ -57,34 +56,106 @@ class AccountTypeScreen extends StatelessWidget {
             const StepProgressIndicator(totalSteps: 5, currentStep: 0),
 
             const SizedBox(height: 48),
-            Container(
-              padding: const EdgeInsets.all(16.0),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.grey.withValues(alpha: 0.5),
-                  width: 1.0,
-                ),
-                borderRadius: BorderRadius.circular(8.0),
-              ),
-              child: Row(
-                children: [
-                  SvgPicture.asset(
-                    'assets/images/img_placeholder.svg',
-                    width: 60.0,
-                    height: 60.0,
+
+            InkWell(
+              onTap: () {
+                null;
+              },
+              borderRadius: BorderRadius.circular(8.0),
+              child: Container(
+                padding: const EdgeInsets.all(16.0),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey.withValues(alpha: 0.5),
+                    width: 1.0,
                   ),
-                  const SizedBox(width: 16.0),
-                  child: Column( 
-                    const Text(
-                      'Patient',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                        fontFamily: 'ClashDisplay',
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                child: Row(
+                  children: [
+                    SvgPicture.asset(
+                      'assets/images/img_placeholder.svg',
+                      width: 60.0,
+                      height: 60.0,
+                    ),
+                    const SizedBox(width: 16.0),
+                    const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Patient',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: 'ClashDisplay',
+                          ),
+                        ),
+                        Text(
+                          'Access your health dashboard',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.grey,
+                            fontFamily: 'PlusJakartaSans',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 16.0),
+
+            InkWell(
+              onTap: () {
+                null;
+              },
+              borderRadius: BorderRadius.circular(8.0),
+              child: Container(
+                padding: const EdgeInsets.all(16.0),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey.withOpacity(0.5),
+                    width: 1.0,
+                  ),
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                child: Row(
+                  children: [
+                    SvgPicture.asset(
+                      'assets/images/img_placeholder.svg',
+                      width: 60.0,
+                      height: 60.0,
+                    ),
+                    const SizedBox(width: 16.0),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text(
+                            'Guardian',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: 'ClashDisplay',
+                            ),
+                          ),
+                          SizedBox(height: 4.0),
+                          Text(
+                            'Stay connected to your loved one’s health and receive alerts in real time.',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.grey,
+                              fontFamily: 'PlusJakartaSans',
+                            ),
+                            softWrap: true,
+                          ),
+                        ],
                       ),
                     ),
+                  ],
                 ),
-                ],
               ),
             ),
           ],

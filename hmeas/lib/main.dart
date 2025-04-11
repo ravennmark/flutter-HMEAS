@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-// import 'package:hmeas/ui/common/splash_screen.dart';
 import 'package:hmeas/ui/auth/account_type_screen.dart';
+// import 'package:hmeas/ui/common/splash_screen.dart';
+// import 'package:hmeas/ui/auth/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
