@@ -37,6 +37,7 @@ class _PatientRegistrationScreenState extends State<PatientRegistrationScreen> {
         ),
         centerTitle: true,
       ),
+
       body: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(
@@ -83,26 +84,7 @@ class _PatientRegistrationScreenState extends State<PatientRegistrationScreen> {
             ),
             LabeledTextField(label: 'Gender', controller: genderController),
 
-            // const SizedBox(height: 0),
-            Align(
-              alignment: Alignment.centerRight,
-              child: TextButton(
-                onPressed: () {
-                  // Handle forgot password
-                },
-                child: const Text(
-                  'Forgot password?',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: Color(0xFF2952D9),
-                    fontFamily: 'ClashDisplay',
-                  ),
-                ),
-              ),
-            ),
-
-            const SizedBox(height: 8),
+            const SizedBox(height: 48),
 
             SizedBox(
               width: double.infinity,

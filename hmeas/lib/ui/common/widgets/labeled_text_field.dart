@@ -21,21 +21,27 @@ class LabeledTextField extends StatelessWidget {
       children: [
         Text(
           label,
-          style: const TextStyle(
+          style: TextStyle(
             fontSize: 18,
+            color: Colors.blueGrey.shade500,
             fontWeight: FontWeight.w500,
             fontFamily: 'ClashDisplay',
           ),
         ),
-        const SizedBox(height: 4),
+        const SizedBox(height: 0),
         TextFormField(
           controller: controller,
           obscureText: obscureText,
           keyboardType: keyboardType,
-          decoration: const InputDecoration(
-            border: UnderlineInputBorder(),
+          decoration: InputDecoration(
             isDense: true,
             contentPadding: EdgeInsets.symmetric(vertical: 8),
+            enabledBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: Colors.blueGrey.shade300),
+            ),
+            focusedBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: Color(0xFF2952D9), width: 2),
+            ),
           ),
         ),
         const SizedBox(height: 16),
