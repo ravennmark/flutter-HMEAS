@@ -23,7 +23,7 @@ class LabeledTextField extends StatelessWidget {
           label,
           style: TextStyle(
             fontSize: 18,
-            color: Colors.blueGrey.shade500,
+            color: Colors.blueGrey.shade600,
             fontWeight: FontWeight.w500,
             fontFamily: 'ClashDisplay',
           ),

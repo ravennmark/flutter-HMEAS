@@ -2,15 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:hmeas/ui/common/widgets/step_progress_indicator.dart';
 import 'package:hmeas/ui/common/widgets/labeled_text_field.dart'; // Make sure to import the LabeledTextField widget
 
-class PatientRegistrationScreen extends StatefulWidget {
-  const PatientRegistrationScreen({super.key});
+class RegistrationScreen extends StatefulWidget {
+  const RegistrationScreen({super.key});
 
   @override
-  State<PatientRegistrationScreen> createState() =>
-      _PatientRegistrationScreenState();
+  State<RegistrationScreen> createState() => _PatientRegistrationScreenState();
 }
 
-class _PatientRegistrationScreenState extends State<PatientRegistrationScreen> {
+class _PatientRegistrationScreenState extends State<RegistrationScreen> {
   final TextEditingController firstNameController = TextEditingController();
   final TextEditingController lastNameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
