@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hmeas/ui/common/widgets/square_input_field.dart';
 
 class VerifyMobileNumberScreen extends StatefulWidget {
   const VerifyMobileNumberScreen({super.key});
@@ -33,25 +34,32 @@ class _VerifyMobileNumberScreenState extends State<VerifyMobileNumberScreen> {
       ),
 
       // input fields for pin code
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
+      body: Center(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextField(
+            SquareInputField(
               controller: mobilenumberController,
-              decoration: const InputDecoration(
-                labelText: 'Enter your mobile number',
-                border: OutlineInputBorder(),
-              ),
-              keyboardType: TextInputType.phone,
+              hintText: '1',
+              onChanged: (value) {},
             ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                // Handle verification logic here
-              },
-              child: const Text('Verify'),
+            const SizedBox(width: 10),
+            SquareInputField(
+              controller: mobilenumberController,
+              hintText: '2',
+              onChanged: (value) {},
+            ),
+            const SizedBox(width: 10),
+            SquareInputField(
+              controller: mobilenumberController,
+              hintText: '3',
+              onChanged: (value) {},
+            ),
+            const SizedBox(width: 10),
+            SquareInputField(
+              controller: mobilenumberController,
+              hintText: '4',
+              onChanged: (value) {},
             ),
           ],
         ),

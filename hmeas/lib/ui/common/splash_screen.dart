@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'package:hmeas/ui/auth/login_screen.dart';
-import 'package:hmeas/ui/auth/verify_mobile_number_screen.dart';
+import 'package:hmeas/ui/auth/mobile_number_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -10,9 +10,7 @@ class SplashScreen extends StatelessWidget {
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(
-          builder: (context) => const VerifyMobileNumberScreen(),
-        ),
+        MaterialPageRoute(builder: (context) => const MobileNumberScreen()),
       );
     });
     return Scaffold(

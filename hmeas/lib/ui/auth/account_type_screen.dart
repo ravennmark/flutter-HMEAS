@@ -116,7 +116,7 @@ class AccountTypeScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 decoration: BoxDecoration(
                   border: Border.all(
-                    color: Colors.grey.withOpacity(0.5),
+                    color: Colors.grey.withValues(alpha: 0.5),
                     width: 1.0,
                   ),
                   borderRadius: BorderRadius.circular(20.0),
