@@ -3,14 +3,16 @@ import 'package:flutter/services.dart';
 
 class SquareInputField extends StatefulWidget {
   final TextEditingController controller;
-  final String? hintText;
   final ValueChanged<String>? onChanged;
+  final FocusNode? focusNode;
+  final double? height;
 
   const SquareInputField({
     Key? key,
     required this.controller,
-    this.hintText,
     this.onChanged,
+    this.focusNode,
+    this.height,
   }) : super(key: key);
 
   @override
@@ -46,9 +48,11 @@ class _SquareInputFieldState extends State<SquareInputField> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 100,
-      height: 100,
+      width: 75,
+      height: widget.height ?? 75,
       child: TextField(
+        focusNode: widget.focusNode,
+        showCursor: false,
         controller: widget.controller,
         keyboardType: TextInputType.number,
         inputFormatters: <TextInputFormatter>[
@@ -56,6 +60,11 @@ class _SquareInputFieldState extends State<SquareInputField> {
           LengthLimitingTextInputFormatter(1),
         ],
         textAlign: TextAlign.center,
+        style: const TextStyle(
+          fontSize: 48,
+          fontWeight: FontWeight.w600,
+          fontFamily: 'ClashDisplay',
+        ),
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
@@ -63,9 +72,8 @@ class _SquareInputFieldState extends State<SquareInputField> {
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
-            borderSide: BorderSide(color: Color(0xFF2952D9), width: 1),
+            borderSide: BorderSide(color: Color(0xFF2952D9), width: 2),
           ),
-          hintText: widget.hintText,
           contentPadding: EdgeInsets.zero,
         ),
         onChanged: (value) {

@@ -1,6 +1,12 @@
+/* @brief This is the splash screen of the app. It displays the logo and a loading indicator.
+ *
+ * 
+ */
 import 'package:flutter/material.dart';
 // import 'package:hmeas/ui/auth/login_screen.dart';
-import 'package:hmeas/ui/auth/mobile_number_screen.dart';
+// import 'package:hmeas/ui/auth/mobile_number_
+// import 'package:hmeas/ui/auth/verify_otp_screen.dart';
+import 'package:hmeas/ui/auth/create_password_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -10,9 +16,11 @@ class SplashScreen extends StatelessWidget {
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const MobileNumberScreen()),
+        MaterialPageRoute(builder: (context) => const CreatePasswordScreen()),
       );
     });
+
+    //UI starts here
     return Scaffold(
       body: Column(
         children: [

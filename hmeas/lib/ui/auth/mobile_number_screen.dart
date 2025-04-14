@@ -68,7 +68,7 @@ class _MobileNumberScreenState extends State<MobileNumberScreen> {
                 children: [
                   Row(
                     children: [
-                      // Country code container with flag + code
+                      // Country code container with flag
                       Container(
                         padding: const EdgeInsets.symmetric(
                           horizontal: 10,
