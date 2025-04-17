@@ -8,18 +8,18 @@ class SquareInputField extends StatefulWidget {
   final double? height;
 
   const SquareInputField({
-    Key? key,
+    super.key,
     required this.controller,
     this.onChanged,
     this.focusNode,
     this.height,
-  }) : super(key: key);
+  });
 
   @override
-  _SquareInputFieldState createState() => _SquareInputFieldState();
+  SquareInputFieldState createState() => SquareInputFieldState();
 }
 
-class _SquareInputFieldState extends State<SquareInputField> {
+class SquareInputFieldState extends State<SquareInputField> {
   @override
   void initState() {
     super.initState();

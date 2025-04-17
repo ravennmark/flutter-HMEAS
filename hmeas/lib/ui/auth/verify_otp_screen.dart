@@ -10,22 +10,22 @@ class VerifyOTPScreen extends StatefulWidget {
 }
 
 class _VerifyOTPScreenState extends State<VerifyOTPScreen> {
-  final TextEditingController Pin1Controller = TextEditingController();
-  final TextEditingController Pin2Controller = TextEditingController();
-  final TextEditingController Pin3Controller = TextEditingController();
-  final TextEditingController Pin4Controller = TextEditingController();
+  final TextEditingController pin1Controller = TextEditingController();
+  final TextEditingController pin2Controller = TextEditingController();
+  final TextEditingController pin3Controller = TextEditingController();
+  final TextEditingController pin4Controller = TextEditingController();
 
-  final FocusNode Pin1FocusNode = FocusNode();
-  final FocusNode Pin2FocusNode = FocusNode();
-  final FocusNode Pin3FocusNode = FocusNode();
-  final FocusNode Pin4FocusNode = FocusNode();
+  final FocusNode pin1FocusNode = FocusNode();
+  final FocusNode pin2FocusNode = FocusNode();
+  final FocusNode pin3FocusNode = FocusNode();
+  final FocusNode pin4FocusNode = FocusNode();
 
   @override
   void dispose() {
-    Pin1Controller.dispose();
-    Pin2Controller.dispose();
-    Pin3Controller.dispose();
-    Pin4Controller.dispose();
+    pin1Controller.dispose();
+    pin2Controller.dispose();
+    pin3Controller.dispose();
+    pin4Controller.dispose();
     super.dispose();
   }
 
@@ -112,22 +112,22 @@ class _VerifyOTPScreenState extends State<VerifyOTPScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SquareInputField(
-                  controller: Pin1Controller,
+                  controller: pin1Controller,
                   onChanged: (value) {},
                 ),
                 const SizedBox(width: 10),
                 SquareInputField(
-                  controller: Pin2Controller,
+                  controller: pin2Controller,
                   onChanged: (value) {},
                 ),
                 const SizedBox(width: 10),
                 SquareInputField(
-                  controller: Pin3Controller,
+                  controller: pin3Controller,
                   onChanged: (value) {},
                 ),
                 const SizedBox(width: 10),
                 SquareInputField(
-                  controller: Pin4Controller,
+                  controller: pin4Controller,
                   onChanged: (value) {},
                 ),
               ],

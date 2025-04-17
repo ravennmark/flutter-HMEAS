@@ -107,7 +107,7 @@ class _CreatePasswordScreenState extends State<CreatePasswordScreen> {
                 elevation: 4,
               ),
               onPressed: () {
-                // TODO: Add validation logic here
+                null; // Replace with your navigation logic
               },
               child: const Text(
                 'Next',
