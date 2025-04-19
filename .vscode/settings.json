@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "C:/Users/Admin/Documents/Code/Github/SE2-flutter-hmeas/hmeas/windows/flutter"
+    "cmake.sourceDirectory": "C:/Users/Admin/Documents/Code/Github/SE2-flutter-hmeas/hmeas/windows/flutter",
+    "cmake.ignoreCMakeListsMissing": true
 }
